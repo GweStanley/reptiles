@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exotic Reptiles | Shop</title>
+  <style>
+    /* === Base === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+      margin: 0;
+  padding-top: 190px;    
+    }
+    header {
+      background: #1b4332;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 10px;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    h1 { margin-bottom: 0.5rem; }
+
+    /* === Controls === */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      position: fixed;
+      top: 90px;                /* header height + margin */
+      left: 0;
+      width: 100%;
+      padding-top: 0%;
+      padding-bottom: 15px;
+       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 20%;
+    }
+    .controls input, .controls select {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ae0f96;
+      border-radius: 6px;
+      width: 250px;
+    }
+
+    /* === Grid === */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+    }
+    .card h3 { margin-bottom: 0.3rem; }
+    .card p { font-size: 0.95rem; margin: 0.2rem 0; }
+    .price { font-weight: bold; color: #1b4332; margin: 0.4rem 0; }
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #1b4332;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #1b4332;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Reptiles</h1>
+    <p>Browse exotic reptiles available for sale</p>
+  </header>
+
+  <!-- Controls -->
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search reptiles by name...">
+    <select id="filterSelect">
+      <option value="all">By Category</option>
+      <option value="snake">Snakes</option>
+      <option value="lizard">Lizards</option>
+      <option value="turtle">Turtles</option>
+      <option value="frog">Frogs</option>
+      <option value="plant">Habitat Plants </option>
+
+    </select>
+  </div>
+
+  <!-- Grid of reptiles -->
+  <div class="grid" id="productGrid">
+    <!-- Example card -->
+    <!-- African House Snake -->
+<div class="card" data-category="snake">
+  <img src="images/african-house-snake.jpg" alt="African House Snake">
+  <h3>African House Snake</h3>
+  <p class="scientific"><em>Lamprophis fuliginosus</em></p>
+  <p class="price">$80</p>
+  <p>Non-venomous, nocturnal snake native to sub-Saharan Africa. Docile and adaptable to captivity. Brown or gray with lighter underside. Feeds on rodents and thrives in a warm, dry environment (75–85°F). Great for beginners.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Albino Bull Snake -->
+<div class="card" data-category="snake">
+  <img src="images/albino-bull-snake.jpg" alt="Albino Bull Snake">
+  <h3>Albino Bull Snake</h3>
+  <p class="scientific"><em>Pituophis catenifer sayi (Albino)</em></p>
+  <p class="price">$250</p>
+  <p>Striking morph of North American bullsnake. Pale yellow and white with red/orange blotches. Can grow up to 8 feet. Hardy and easy to care for, requires spacious enclosure (75–85°F).</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Albino Corn Snake -->
+<div class="card" data-category="snake">
+  <img src="images/albino-corn-snake-for-sale.jpg" alt="Albino Corn Snake">
+  <h3>Albino Corn Snake</h3>
+  <p class="scientific"><em>Pantherophis guttatus (Albino)</em></p>
+  <p class="price">$120</p>
+  <p>Bright white and orange pattern. Gentle temperament, easy to care for. Secure enclosure with hiding spots. Temperature 75–85°F. Excellent feeder, adapts well to captivity.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Asian Vine Snake -->
+<div class="card" data-category="snake">
+  <img src="images/asian-vine-snake.jpg" alt="Asian Vine Snake">
+  <h3>Asian Vine Snake</h3>
+  <p class="scientific"><em>Ahaetulla nasuta</em></p>
+  <p class="price">$200</p>
+  <p>Slender, green arboreal snake from Southeast Asia. Long vine-like appearance, primarily insectivorous. Requires high humidity (75–90%) and basking area ~95–100°F. Suitable for experienced keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Black Racer Snake -->
+<div class="card" data-category="snake">
+  <img src="images/black-racer.jpg" alt="Black Racer Snake">
+  <h3>Black Racer Snake</h3>
+  <p class="scientific"><em>Coluber constrictor</em></p>
+  <p class="price">$90</p>
+  <p>Fast-moving, non-venomous snake from North America. Black with white chin and throat. Diurnal and active. Requires spacious enclosure (75–85°F). Best for experienced keepers due to active nature.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Blind Snake -->
+<div class="card" data-category="snake">
+  <img src="images/blind-snake.jpg" alt="Blind Snake">
+  <h3>Blind Snake</h3>
+  <p class="scientific"><em>Leptotyphlops spp.</em></p>
+  <p class="price">$50</p>
+  <p>Small, burrowing snakes with vestigial eyes. Feed on ants and termites. Requires humid, loose substrate for burrowing. Specialized diet and care; suitable for experienced keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Brown Water Albino Ball Python -->
+<div class="card" data-category="snake">
+  <img src="/images/brown-water-snake.jpg" alt="Brown Water Albino Ball Python">
+  <h3>Brown Water Albino Ball Python</h3>
+  <p class="scientific"><em>Python regius (Albino Morph)</em></p>
+  <p class="price">$300</p>
+  <p>Pale brownish albino ball python. Docile and popular pet. Temperature gradient 75–85°F, humidity 50–60%. Excellent feeder and adapts well to captivity.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Albino Colombian Boa -->
+<div class="card" data-category="snake">
+  <img src="images/albino-colombian-boa.jpg" alt="Albino Colombian Boa">
+  <h3>Albino Colombian Boa</h3>
+  <p class="scientific"><em>Boa constrictor imperator (Albino)</em></p>
+  <p class="price">$400</p>
+  <p>Pale yellow and white coloration. Strong and docile. Requires spacious enclosure (75–85°F) and humidity 60–70%. Excellent feeder and adapts well to captivity.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Amazon Tree Boa -->
+<div class="card" data-category="snake">
+  <img src="images/amazon tree boa.jpg" alt="Amazon Tree Boa">
+  <h3>Amazon Tree Boa</h3>
+  <p class="scientific"><em>Corallus hortulanus</em></p>
+  <p class="price">$350</p>
+  <p>Semi-arboreal, vibrant green, prehensile tail. High humidity (70–80%), temperature 75–85°F. Specialized care; suitable for experienced keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Ball Python -->
+<div class="card" data-category="snake">
+  <img src="images/ball python.jpg" alt="Ball Python">
+  <h3>Ball Python</h3>
+  <p class="scientific"><em>Python regius</em></p>
+  <p class="price">$120</p>
+  <p>Small, non-venomous West African python. Docile, curls into a ball when threatened. Temperature gradient 75–85°F, humidity 50–60%. Excellent feeder and adapts well to captivity.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Black Pastel Ball Python -->
+<div class="card" data-category="snake">
+  <img src="images/buy-black-pastel-ball-python.jpg" alt="Black Pastel Ball Python">
+  <h3>Black Pastel Ball Python</h3>
+  <p class="scientific"><em>Python regius (Black Pastel Morph)</em></p>
+  <p class="price">$250</p>
+  <p>Darker coloration and unique pattern. Popular among breeders. Requires same care as standard ball python: 75–85°F, humidity 50–60%.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Brazilian Rainbow Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-brazilian-rainbow-boa.jpg" alt="Brazilian Rainbow Boa">
+  <h3>Brazilian Rainbow Boa</h3>
+  <p class="scientific"><em>Epicrates cenchria cenchria</em></p>
+  <p class="price">$300</p>
+  <p>Stunning boa with iridescent sheen. High humidity (80–100%), temperature 75–85°F. Semi-arboreal, requires spacious enclosure with climbing opportunities. Suitable for experienced keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+<!-- Central American Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-central-american-boa.jpg" alt="Central American Boa">
+  <h3>Central American Boa</h3>
+  <p class="scientific"><em>Boa constrictor imperator</em></p>
+  <p class="price">$400</p>
+  <p>Large, powerful constrictor from Central America. Docile, arboreal tendencies. Requires spacious enclosure, temperature 75–85°F, humidity 60–70%. Excellent feeders.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Colombian Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-columbian-boa.jpg" alt="Colombian Boa">
+  <h3>Colombian Boa</h3>
+  <p class="scientific"><em>Boa constrictor imperator</em></p>
+  <p class="price">$380</p>
+  <p>Heavy-bodied, terrestrial boa. Docile, grows up to 8–10 feet. Requires enclosure 75–85°F, humidity 60–70%. Feeds well on rodents.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Colombian Rainbow Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-columbian-rainbow-boa.jpg" alt="Colombian Rainbow Boa">
+  <h3>Colombian Rainbow Boa</h3>
+  <p class="scientific"><em>Epicrates maurus</em></p>
+  <p class="price">$350</p>
+  <p>Shiny, iridescent skin. Arboreal and semi-terrestrial. Requires high humidity (80–100%), temp 75–85°F. Suitable for intermediate keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Corn Snake -->
+<div class="card" data-category="snake">
+  <img src="images/buy-corn-snake.jpg" alt="Corn Snake">
+  <h3>Corn Snake</h3>
+  <p class="scientific"><em>Pantherophis guttatus</em></p>
+  <p class="price">$120</p>
+  <p>Popular, docile, and beginner-friendly. Enclosure 75–85°F, hiding spots essential. Feeds on rodents. Numerous morphs available.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Fire Ball Python -->
+<div class="card" data-category="snake">
+  <img src="images/buy-fire-ball-python.jpg" alt="Fire Ball Python">
+  <h3>Fire Ball Python</h3>
+  <p class="scientific"><em>Python regius (Fire Morph)</em></p>
+  <p class="price">$250</p>
+  <p>Bright orange and yellow morph of ball python. Docile, beginner-friendly. Requires 75–85°F, 50–60% humidity.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Gray Rat Snake -->
+<div class="card" data-category="snake">
+  <img src="images/buy-gray-rat-snake.jpg" alt="Gray Rat Snake">
+  <h3>Gray Rat Snake</h3>
+  <p class="scientific"><em>Ptyas korros</em></p>
+  <p class="price">$100</p>
+  <p>Non-venomous, fast, active species. Gray coloration, semi-arboreal. Enclosure 75–85°F. Feeds on rodents, suitable for intermediate keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Kenyan Sand Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-kenyan-sand-boa.jpg" alt="Kenyan Sand Boa">
+  <h3>Kenyan Sand Boa</h3>
+  <p class="scientific"><em>Eryx colubrinus</em></p>
+  <p class="price">$90</p>
+  <p>Small, burrowing boa. Docile and easy to handle. Substrate for burrowing essential. Temperature 75–85°F. Feeds on small rodents.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Pastel Ball Python -->
+<div class="card" data-category="snake">
+  <img src="images/buy-pastel-ball-python.jpg" alt="Pastel Ball Python">
+  <h3>Pastel Ball Python</h3>
+  <p class="scientific"><em>Python regius (Pastel Morph)</em></p>
+  <p class="price">$200</p>
+  <p>Lighter, brighter morph of ball python. Docile, beginner-friendly. Requires 75–85°F, 50–60% humidity. Excellent feeder.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Rosy Boa -->
+<div class="card" data-category="snake">
+  <img src="images/buy-rosy-boa.jpg" alt="Rosy Boa">
+  <h3>Rosy Boa</h3>
+  <p class="scientific"><em>Lichanura trivirgata</em></p>
+  <p class="price">$120</p>
+  <p>Small, slow-moving boa from Southwestern US. Docile and easy to handle. Enclosure 75–85°F, 40–50% humidity. Feeds on small rodents.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Woma Ball Python -->
+<div class="card" data-category="snake">
+  <img src="images/buy-woma-ball-python.jpg" alt="Woma Ball Python">
+  <h3>Woma Ball Python</h3>
+  <p class="scientific"><em>Aspidites ramsayi</em></p>
+  <p class="price">$300</p>
+  <p>Rare Australian python. Docile but shy. Requires 75–85°F, 50–60% humidity. Feeds on rodents. Suitable for intermediate to advanced keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Corn Snake Morphs -->
+<div class="card" data-category="snake">
+  <img src="images/corn-snake-morphs-for-sale.jpg" alt="Corn Snake Morphs">
+  <h3>Corn Snake Morphs</h3>
+  <p class="scientific"><em>Pantherophis guttatus (Various Morphs)</em></p>
+  <p class="price">Varies</p>
+  <p>Variety of colors and patterns of corn snakes. Docile, beginner-friendly. Enclosure 75–85°F. Excellent feeders.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- DeKay's Snake -->
+<div class="card" data-category="snake">
+  <img src="images/dekays-snake.jpg" alt="DeKay's Snake">
+  <h3>DeKay's Snake</h3>
+  <p class="scientific"><em>Storeria dekayi</em></p>
+  <p class="price">$50</p>
+  <p>Small, harmless, secretive snake. Feeds on earthworms and small invertebrates. Easy to care for, suitable for beginners.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Eastern Hognose -->
+<div class="card" data-category="snake">
+  <img src="images/eastern-hognose-snake.jpg" alt="Eastern Hognose Snake">
+  <h3>Eastern Hognose</h3>
+  <p class="scientific"><em>Heterodon platirhinos</em></p>
+  <p class="price">$80</p>
+  <p>Known for defensive bluffing. Mild-mannered, feeds on amphibians. Enclosure 75–85°F, substrate for burrowing. Great for intermediate keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Egg-Eating Snake -->
+<div class="card" data-category="snake">
+  <img src="images/egg-eating-snake.jpg" alt="Egg-Eating Snake">
+  <h3>Egg-Eating Snake</h3>
+  <p class="scientific"><em>Dasypeltis spp.</em></p>
+  <p class="price">$100</p>
+  <p>Specialized diet of bird eggs. Slender, harmless, requires enclosure with humidity 70–80% and climbing opportunities. Experienced keepers recommended.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Florida Green Snake -->
+<div class="card" data-category="snake">
+  <img src="images/florida-green-snake.jpg" alt="Florida Green Snake">
+  <h3>Florida Green Snake</h3>
+  <p class="scientific"><em>Opheodrys aestivus</em></p>
+  <p class="price">$70</p>
+  <p>Small, bright green, non-venomous. Active and mild-mannered. Requires enclosure with vegetation and 75–85°F. Feeds on insects.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Gopher Snake -->
+<div class="card" data-category="snake">
+  <img src="images/gopher-snake.jpg" alt="Gopher Snake">
+  <h3>Gopher Snake</h3>
+  <p class="scientific"><em>Pituophis catenifer</em></p>
+  <p class="price">$120</p>
+  <p>Large North American snake, non-venomous, constrictor. Hardy, requires 75–85°F, feeds on rodents. Excellent for intermediate keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Hognose Snake -->
+<div class="card" data-category="snake">
+  <img src="images/hognose-snake-for-sale.jpg" alt="Hognose Snake">
+  <h3>Hognose Snake</h3>
+  <p class="scientific"><em>Heterodon spp.</em></p>
+  <p class="price">$80</p>
+  <p>Known for bluffing and mild temperament. Feeds on amphibians. Requires 75–85°F, substrate for burrowing.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Mangrove Snake -->
+<div class="card" data-category="snake">
+  <img src="images/mangrove-snake.jpg" alt="Mangrove Snake">
+  <h3>Mangrove Snake</h3>
+  <p class="scientific"><em>Boiga dendrophila</em></p>
+  <p class="price">$300</p>
+  <p>Arboreal, mildly venomous. Black with yellow bands. Requires high humidity (75–85%), arboreal setup. Experienced keepers only.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Ornate Flying Snake -->
+<div class="card" data-category="snake">
+  <img src="images/ornate-flying-snake.jpg" alt="Ornate Flying Snake">
+  <h3>Ornate Flying Snake</h3>
+  <p class="scientific"><em>Chrysopelea ornata</em></p>
+  <p class="price">$250</p>
+  <p>Arboreal snake capable of gliding. Needs vertical space, temperature 75–85°F, humidity 70–80%. Feeds on lizards and small rodents. Expert care recommended.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Prairie Ringneck -->
+<div class="card" data-category="snake">
+  <img src="images/prairie-ringneck-snake.jpg" alt="Prairie Ringneck Snake">
+  <h3>Prairie Ringneck Snake</h3>
+  <p class="scientific"><em>Diadophis punctatus arnyi</em></p>
+  <p class="price">$60</p>
+  <p>Small, mild-mannered snake. Diurnal, insectivorous. Requires 75–85°F, substrate for burrowing. Beginner-friendly.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Rat Snake -->
+<div class="card" data-category="snake">
+  <img src="images/rat-snakes-for-sale.jpg" alt="Rat Snake">
+  <h3>Rat Snake</h3>
+  <p class="scientific"><em>Pantherophis spp.</em></p>
+  <p class="price">$100</p>
+  <p>Non-venomous, excellent rodent hunter. Hardy, enclosure 75–85°F. Active and arboreal, suitable for intermediate keepers.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Red-Bellied Water Snake -->
+<div class="card" data-category="snake">
+  <img src="images/red-bellied-water-snake.jpg" alt="Red-Bellied Water Snake">
+  <h3>Red-Bellied Water Snake</h3>
+  <p class="scientific"><em>Storeria occipitomaculata</em></p>
+  <p class="price">$90</p>
+  <p>Small, semi-aquatic, mild-mannered. Requires water feature in enclosure. Temperature 75–85°F. Feeds on amphibians and fish.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Sunbeam Snake -->
+<div class="card" data-category="snake">
+  <img src="images/sunbeam-snake.jpg" alt="Sunbeam Snake">
+  <h3>Sunbeam Snake</h3>
+  <p class="scientific"><em>Xenopeltis unicolor</em></p>
+  <p class="price">$200</p>
+  <p>Iridescent scales, burrowing snake. Requires warm (80–90°F) and humid enclosure. Feeds on rodents. Intermediate keepers preferred.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Water Snake -->
+<div class="card" data-category="snake">
+  <img src="images/water-snake.jpg" alt="Water Snake">
+  <h3>Water Snake</h3>
+  <p class="scientific"><em>Nerodia spp.</em></p>
+  <p class="price">$120</p>
+  <p>Semi-aquatic, active, non-venomous. Requires water access and basking area. Temperature 75–85°F. Feeds on fish and amphibians.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Worm Snake -->
+<div class="card" data-category="snake">
+  <img src="images/worm-snake.jpg" alt="Worm Snake">
+  <h3>Worm Snake</h3>
+  <p class="scientific"><em>Carphophis amoenus</em></p>
+  <p class="price">$50</p>
+  <p>Small, burrowing, harmless snake. Feeds on earthworms and soft-bodied invertebrates. Substrate essential for burrowing. Beginner-friendly.</p>
+  <a href="contact.html" class="btn">Order</a>
+</div>
+
+<!-- Lizard Cards -->
+<div class="card" data-category="lizard">
+  <img src="images/bearde-dragon.jpg" alt="Bearded Dragon">
+  <h3>Bearded Dragon <br><small><i>Pogona vitticeps</i></small></h3>
+  <p class="price">$180</p>
+  <p>Friendly, docile, and social. Needs UVB lighting, mixed diet of insects and greens. Great for beginners.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/leopard-gecko.jpg" alt="Leopard Gecko">
+  <h3>Leopard Gecko <br><small><i>Eublepharis macularius</i></small></h3>
+  <p class="price">$90</p>
+  <p>Nocturnal ground-dweller. Easy care, insect diet, warm/cool side habitat. Beginner friendly.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/blue-tongued-skink.jpg" alt="Blue-Tongued Skink">
+  <h3>Blue-Tongued Skink <br><small><i>Tiliqua scincoides intermedia</i></small></h3>
+  <p class="price">$250</p>
+  <p>Larger, calm temperament. Needs substrate for burrowing, moderate humidity, and UVB lighting.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/fire-skink.jpg" alt="Fire Skink">
+  <h3>Fire Skink <br><small><i>Lepidothyris fernandi</i></small></h3>
+  <p class="price">$130</p>
+  <p>Bright red colors, shy nature. Requires burrowing substrate, humidity, and insect diet.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/african-fat-tailed-gecko.jpg" alt="African Fat-Tailed Gecko">
+  <h3>African Fat-Tailed Gecko <br><small><i>Hemitheconyx caudicinctus</i></small></h3>
+  <p class="price">$110</p>
+  <p>Calm, nocturnal. Chunky tail, humidity-loving gecko. Easy to handle and care for.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/green-anole.webp" alt="Green Anole">
+  <h3>Green Anole <br><small><i>Anolis carolinensis</i></small></h3>
+  <p class="price">$40</p>
+  <p>Small and active. Arboreal climber needing vertical space, humidity, and insects.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/crested-gecko.jpg" alt="Crested Gecko">
+  <h3>Crested Gecko <br><small><i>Correlophus ciliatus</i></small></h3>
+  <p class="price">$120</p>
+  <p>Arboreal, nocturnal gecko. Eats insects and fruit mix. Requires humidity and climbing space.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/uromastyx.jpg" alt="Uromastyx">
+  <h3>Uromastyx <br><small><i>Uromastyx spp.</i></small></h3>
+  <p class="price">$200</p>
+  <p>Desert-dweller. Herbivorous, loves heat and low humidity. Needs basking and UVB lighting.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/senegal-chameleon.jpg" alt="Senegal Chameleon">
+  <h3>Senegal Chameleon <br><small><i>Chamaeleo senegalensis</i></small></h3>
+  <p class="price">$150</p>
+  <p>Small chameleon. Needs tall, ventilated enclosure, humidity, live insects. Handle carefully.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/day-gecko.jpg" alt="Day Gecko">
+  <h3>Day Gecko <br><small><i>Phelsuma spp.</i></small></h3>
+  <p class="price">$140</p>
+  <p>Diurnal and colorful. Requires vertical enclosure, humidity, UVB, insects and fruit diet.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/green-iguana.jpg" alt="Green Iguana">
+  <h3>Green Iguana <br><small><i>Iguana iguana</i></small></h3>
+  <p class="price">$250</p>
+  <p>Large, herbivorous lizard. Needs very spacious enclosure, UVB lighting, and foliage diet.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/savannah-monitor.jpg" alt="Savannah Monitor">
+  <h3>Savannah Monitor <br><small><i>Varanus exanthematicus</i></small></h3>
+  <p class="price">$300</p>
+  <p>Strong, large monitor. Needs large space, high heat, UVB, secure setup. Advanced keepers only.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/ackie-monitor.jpg" alt="Ackie Monitor">
+  <h3>Ackie Monitor <br><small><i>Varanus acanthurus</i></small></h3>
+  <p class="price">$280</p>
+  <p>Smaller monitor species. Needs hot basking area, UVB, and varied diet. Easier than large monitors.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/banded-gecko.jpg" alt="Pachydactylus Gecko">
+  <h3>Banded Gecko <br><small><i>Pachydactylus fasciatus</i></small></h3>
+  <p class="price">$70</p>
+  <p>Small and hardy. Needs hiding spots, sandy substrate, insect diet. Attractive banding.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/liolaemus-chiliensis.jpg" alt="Liolaemus Chiliensis">
+  <h3>Liolaemus Chiliensis <br><small><i>Liolaemus chiliensis</i></small></h3>
+  <p class="price">$100</p>
+  <p>Medium-sized, diurnal lizard. Requires UVB, varied habitat with plants and climbing options.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/spiny-tailed-lizard.jpg" alt="East African Spiny-Tailed Lizard">
+  <h3>Spiny-Tailed Lizard <br><small><i>Cordylus tropidosternum</i></small></h3>
+  <p class="price">$150</p>
+  <p>Hardy species. Needs rocky hides, basking spot, and insect diet. Moderate handling tolerance.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/green-basilisk.jpg" alt="Green Basilisk">
+  <h3>Green Basilisk <br><small><i>Basiliscus plumifrons</i></small></h3>
+  <p class="price">$170</p>
+  <p>Active climber and swimmer. Needs large enclosure with water features. Best for experienced keepers.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/collared-lizard.jpg" alt="Collared Lizard">
+  <h3>Collared Lizard <br><small><i>Crotaphytus collaris</i></small></h3>
+  <p class="price">$160</p>
+  <p>Brightly colored and active. Needs basking rock, UVB, and spacious enclosure.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/chinese-water-dragon.jpg" alt="Chinese Water Dragon">
+  <h3>Chinese Water Dragon <br><small><i>Physignathus cocincinus</i></small></h3>
+  <p class="price">$210</p>
+  <p>Large arboreal species. Needs tall terrarium with branches, water bowl, humidity, and UVB.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="lizard">
+  <img src="images/gargoyle-gecko.jpg" alt="Gargoyle Gecko">
+  <h3>Gargoyle Gecko <br><small><i>Rhacodactylus auriculatus</i></small></h3>
+  <p class="price">$130</p>
+  <p>Arboreal, nocturnal. Needs high humidity, climbing branches, mixed insect + fruit diet.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<!-- Frog Cards -->
+<div class="card" data-category="frog">
+  <img src="images/pacman-frog.jpg" alt="Pacman Frog">
+  <h3>Pacman Frog <br><small><i>Ceratophrys ornata</i></small></h3>
+  <p class="price">$60</p>
+  <p>Chubby ground-dweller with big appetite. Needs moist substrate and simple care. Best for observation, not handling.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/white-tree-frog.jpg" alt="White's Tree Frog">
+  <h3>White's Tree Frog <br><small><i>Litoria caerulea</i></small></h3>
+  <p class="price">$50</p>
+  <p>Docile, hardy, arboreal frog. Easy care, needs humidity, climbing branches, and moderate heat.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/american-green-tree-frog.jpg" alt="American Green Tree Frog">
+  <h3>American Green Tree Frog <br><small><i>Hyla cinerea</i></small></h3>
+  <p class="price">$30</p>
+  <p>Small and active climber. Needs tall enclosure, live plants, and insect diet. Easy to care for.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/amazon-milk-frog.jpg" alt="Amazon Milk Frog">
+  <h3>Amazon Milk Frog <br><small><i>Trachycephalus resinifictrix</i></small></h3>
+  <p class="price">$70</p>
+  <p>Beautiful black-and-white patterned tree frog. Needs humidity, vertical space, and group housing.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/fire-bellied-toad.jpg" alt="Fire-Bellied Toad">
+  <h3>Fire-Bellied Toad <br><small><i>Bombina orientalis</i></small></h3>
+  <p class="price">$25</p>
+  <p>Colorful semi-aquatic frog with bright orange belly. Easy to care for, needs water + land setup.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/african-bullfrog.jpg" alt="African Bullfrog">
+  <h3>African Bullfrog <br><small><i>Pyxicephalus adspersus</i></small></h3>
+  <p class="price">$100</p>
+  <p>Massive frog, can live decades. Eats rodents and insects. Requires large terrarium and strong care.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/dart-frog.jpg" alt="Poison Dart Frog">
+  <h3>Poison Dart Frog <br><small><i>Dendrobates spp.</i></small></h3>
+  <p class="price">$90</p>
+  <p>Tiny, colorful frog. Non-toxic in captivity. Needs humid vivarium with live plants and micro-prey.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/tomato-frog.jpg" alt="Tomato Frog">
+  <h3>Tomato Frog <br><small><i>Dyscophus antongilii</i></small></h3>
+  <p class="price">$65</p>
+  <p>Bright red-orange frog from Madagascar. Needs moist substrate and hiding spots. Eats insects.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/redeye-tree-frog.jpg" alt="Red-Eyed Tree Frog">
+  <h3>Red-Eyed Tree Frog <br><small><i>Agalychnis callidryas</i></small></h3>
+  <p class="price">$80</p>
+  <p>Iconic with bright red eyes and green body. Arboreal, needs vertical enclosure and humidity.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/gray-tree-frog.jpg" alt="Gray Tree Frog">
+  <h3>Gray Tree Frog <br><small><i>Hyla versicolor</i></small></h3>
+  <p class="price">$35</p>
+  <p>Small arboreal frog with camouflaged skin. Needs humidity, climbing plants, and insect diet.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/mossy-frog.jpg" alt="Mossy Frog">
+  <h3>Mossy Frog <br><small><i>Theloderma corticale</i></small></h3>
+  <p class="price">$120</p>
+  <p>Unique bumpy, moss-like skin. Semi-aquatic, thrives in naturalistic humid terrarium.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/pygmy-frog.jpg" alt="Pygmy Leaf Frog">
+  <h3>Pygmy Leaf Frog <br><small><i>Cruziohyla craspedopus</i></small></h3>
+  <p class="price">$150</p>
+  <p>Rare, beautiful tree frog. Requires expert care with humidity, live plants, and night activity.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/barking-tree-frog.jpg" alt="Barking Tree Frog">
+  <h3>Barking Tree Frog <br><small><i>Hyla gratiosa</i></small></h3>
+  <p class="price">$55</p>
+  <p>Larger tree frog with deep call. Arboreal, needs high humidity and spacious habitat.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="frog">
+  <img src="images/budgetts-frog.jpg" alt="Budgett's Frog">
+  <h3>Budgett's Frog <br><small><i>Lepidobatrachus laevis</i></small></h3>
+  <p class="price">$95</p>
+  <p>Odd-looking aquatic frog. Aggressive eater. Needs water-heavy enclosure with shallow areas.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<!-- Turtle Cards -->
+
+<div class="card" data-category="turtle">
+  <img src="images/red-eared-slider.jpg" alt="Red-Eared Slider">
+  <h3>Red-Eared Slider</h3>
+  <p class="price">$80</p>
+  <p><em>Trachemys scripta elegans</em> — One of the most popular pet turtles, active and hardy, but needs proper tank setup.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/eastern-box-turtle.jpg" alt="Eastern Box Turtle">
+  <h3>Eastern Box Turtle</h3>
+  <p class="price">$120</p>
+  <p><em>Terrapene carolina carolina</em> — Known for their domed shell and long lifespan, requiring a semi-terrestrial habitat.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/painted-turtle.jpg" alt="Painted Turtle">
+  <h3>Painted Turtle</h3>
+  <p class="price">$70</p>
+  <p><em>Chrysemys picta</em> — Brightly marked aquatic turtle, friendly and common in captivity.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/musk-turtle.jpg" alt="Common Musk Turtle">
+  <h3>Common Musk Turtle</h3>
+  <p class="price">$90</p>
+  <p><em>Sternotherus odoratus</em> — Also called "stinkpot," small aquatic turtle suited for smaller enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/map-turtle.jpg" alt="Map Turtle">
+  <h3>Map Turtle</h3>
+  <p class="price">$100</p>
+  <p><emGraptemys geographica</em> — Recognized by the map-like patterns on their shells, active swimmers.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/spotted-turtle.jpg" alt="Spotted Turtle">
+  <h3>Spotted Turtle</h3>
+  <p class="price">$150</p>
+  <p><em>Clemmys guttata</em> — Small, attractive turtle with yellow spots; semi-aquatic with calm demeanor.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/african-side-neck.jpg" alt="African Side-neck Turtle">
+  <h3>African Side-neck Turtle</h3>
+  <p class="price">$110</p>
+  <p><em>Pelomedusa subrufa</em> — Unique for tucking their heads sideways; hardy aquatic species.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/wood-turtle.jpg" alt="Wood Turtle">
+  <h3>Wood Turtle</h3>
+  <p class="price">$140</p>
+  <p><em>Glyptemys insculpta</em> — Intelligent and hardy, requiring both land and water areas.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/reeves-turtle.jpg" alt="Reeves' Turtle">
+  <h3>Reeves' Turtle</h3>
+  <p class="price">$85</p>
+  <p><em>Mauremys reevesii</em> — Small freshwater turtle from Asia, suitable for community tanks.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/softshell-turtle.jpg" alt="Softshell Turtle">
+  <h3>Softshell Turtle</h3>
+  <p class="price">$160</p>
+  <p><em>Apalone spinifera</em> — Flat-bodied turtles with soft shells, fast swimmers but need space.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/chinese-striped-neck.jpg" alt="Chinese Striped-neck Turtle">
+  <h3>Chinese Striped-neck Turtle</h3>
+  <p class="price">$90</p>
+  <p><em>Mauremys sinensis</em> — Hardy and attractive with striped necks, great for aquariums.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/yellow-bellied-slider.jpg" alt="Yellow-Bellied Slider">
+  <h3>Yellow-Bellied Slider</h3>
+  <p class="price">$95</p>
+  <p><em>Trachemys scripta scripta</em> — Active and popular pets, needing both water and basking areas.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/diamondback-terrapin.jpg" alt="Diamondback Terrapin">
+  <h3>Diamondback Terrapin</h3>
+  <p class="price">$170</p>
+  <p><em>Malaclemys terrapin</em> — Attractive brackish-water turtles with patterned skin and shells.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/loggerhead-musk.jpg" alt="Loggerhead Musk Turtle">
+  <h3>Loggerhead Musk Turtle</h3>
+  <p class="price">$100</p>
+  <p><em>Sternotherus minor</em> — Small and hardy species, often shy but excellent for small tanks.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/cumberland-slider.jpg" alt="Cumberland Slider">
+  <h3>Cumberland Slider</h3>
+  <p class="price">$90</p>
+  <p><em>Trachemys scripta troostii</em> — Similar to red-eared sliders, playful and hardy aquatic turtles.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/chinese-softshell.jpg" alt="Chinese Softshell Turtle">
+  <h3>Chinese Softshell Turtle</h3>
+  <p class="price">$150</p>
+  <p><em>Pelodiscus sinensis</em> — Aquatic turtle with long snout and soft shell, requires sandy bottoms.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/indian-star-tortoise.jpg" alt="Indian Star Tortoise">
+  <h3>Indian Star Tortoise</h3>
+  <p class="price">$200</p>
+  <p><em>Geochelone elegans</em> — Popular tortoise with star-patterned shell, terrestrial with special diet needs.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/mud-turtle.jpg" alt="Eastern Mud Turtle">
+  <h3>Eastern Mud Turtle</h3>
+  <p class="price">$80</p>
+  <p><em>Kinosternon subrubrum</em> — Small turtle that thrives in shallow waters and mud-bottom tanks.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/snapping-turtle.jpg" alt="Common Snapping Turtle">
+  <h3>Common Snapping Turtle</h3>
+  <p class="price">$180</p>
+  <p><em>Chelhydra serpentina</em> — Large and powerful aquatic turtle, not for beginners.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="turtle">
+  <img src="images/alligator-snapping.jpg" alt="Alligator Snapping Turtle">
+  <h3>Alligator Snapping Turtle</h3>
+  <p class="price">$250</p>
+  <p><em>Macrochelys temminckii</em> — Massive and prehistoric-looking, requires expert care and large enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<!-- Habitat Plants & Flowers Cards -->
+
+<div class="card" data-category="plant">
+  <img src="images/pothos.jpg" alt="Pothos">
+  <h3>Pothos</h3>
+  <p class="price">$15</p>
+  <p><em>Epipremnum aureum</em> — Hardy vine that thrives in reptile tanks, great for climbing and covering space.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/ferns.jpg" alt="Boston Fern">
+  <h3>Boston Fern</h3>
+  <p class="price">$12</p>
+  <p><em>Nephrolepis exaltata</em> — Provides humidity and lush cover, ideal for amphibian and tropical reptile enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/snake-plant.jpg" alt="Snake Plant">
+  <h3>Snake Plant</h3>
+  <p class="price">$18</p>
+  <p><em>Sansevieria trifasciata</em> — Hardy upright plant, safe for most reptile tanks, excellent air purifier.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/spider-plant.jpg" alt="Spider Plant">
+  <h3>Spider Plant</h3>
+  <p class="price">$14</p>
+  <p><em>Chlorophytum comosum</em> — Fast-growing plant, non-toxic and suitable for lizard and turtle enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/bromeliad.jpg" alt="Bromeliad">
+  <h3>Bromeliad</h3>
+  <p class="price">$20</p>
+  <p><em>Bromeliaceae family</em> — Colorful tropical plants that hold water, ideal for frog habitats.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/air-plant.jpg" alt="Air Plant">
+  <h3>Air Plant</h3>
+  <p class="price">$10</p>
+  <p><em>Tillandsia</em> — Low-maintenance plant that thrives on branches, excellent for arboreal reptile enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/fiddle-leaf.jpg" alt="Fiddle Leaf Fig">
+  <h3>Fiddle Leaf Fig</h3>
+  <p class="price">$22</p>
+  <p><em>Ficus lyrata</em> — Large-leaf plant that provides natural cover and climbing structures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/peace-lily.jpg" alt="Peace Lily">
+  <h3>Peace Lily</h3>
+  <p class="price">$16</p>
+  <p><em>Spathiphyllum</em> — Keeps humidity stable, best for tropical reptile tanks, attractive white flowers.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/hibiscus.jpg" alt="Hibiscus">
+  <h3>Hibiscus</h3>
+  <p class="price">$25</p>
+  <p><em>Hibiscus rosa-sinensis</em> — Produces edible flowers, often enjoyed by iguanas and tortoises.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/aloe-vera.jpg" alt="Aloe Vera">
+  <h3>Aloe Vera</h3>
+  <p class="price">$15</p>
+  <p><em>Aloe barbadensis</em> — Hardy succulent, safe for desert reptile setups, low-water requirement.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/philodendron.jpg" alt="Philodendron">
+  <h3>Philodendron</h3>
+  <p class="price">$17</p>
+  <p><em>Philodendron hederaceum</em> — Excellent climbing plant, thrives in humid terrariums, lush greenery.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/bamboo.jpg" alt="Bamboo Plant">
+  <h3>Bamboo</h3>
+  <p class="price">$20</p>
+  <p><em>Bambusoideae</em> — Strong and tall plant, great for arboreal reptile habitats like chameleons.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/zz-plant.jpg" alt="ZZ Plant">
+  <h3>ZZ Plant</h3>
+  <p class="price">$19</p>
+  <p><em>Zamioculcas zamiifolia</em> — Low-light tolerant, strong foliage plant suitable for reptile tanks.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/calathea.jpg" alt="Calathea">
+  <h3>Calathea</h3>
+  <p class="price">$18</p>
+  <p><em>Calathea orbifolia</em> — Beautiful patterned leaves, thrives in humidity, ideal for frog enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/ivy.jpg" alt="English Ivy">
+  <h3>English Ivy</h3>
+  <p class="price">$13</p>
+  <p><em>Hedera helix</em> — Fast-growing climber, helps create canopy cover in terrariums.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/monstera.jpg" alt="Monstera">
+  <h3>Monstera</h3>
+  <p class="price">$24</p>
+  <p><em>Monstera deliciosa</em> — Large tropical plant with split leaves, excellent for arboreal reptiles.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/begonia.jpg" alt="Begonia">
+  <h3>Begonia</h3>
+  <p class="price">$14</p>
+  <p><em>Begonia semperflorens</em> — Colorful flowering plant, adds vibrancy to terrariums, humidity-loving.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/dracaena.jpg" alt="Dracaena">
+  <h3>Dracaena</h3>
+  <p class="price">$18</p>
+  <p><em>Dracaena marginata</em> — Hardy plant with long leaves, great for mid-size reptile enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/orchid.jpg" alt="Orchid">
+  <h3>Orchid</h3>
+  <p class="price">$22</p>
+  <p><em>Orchidaceae</em> — Exotic flowering plants that add color and thrive in humid reptile habitats.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+<div class="card" data-category="plant">
+  <img src="images/peace-rose.jpg" alt="Peace Rose">
+  <h3>Peace Rose</h3>
+  <p class="price">$20</p>
+  <p><em>Rosa 'Peace'</em> — Safe flowering plant, offers natural shade and aesthetic appeal in enclosures.</p>
+  <a href="contact.html" class="btn">Request</a>
+</div>
+
+
+ </div>
+
+  <footer>
+    <p>&copy; 2025 Exotic Reptiles. All rights reserved.</p>
+  </footer>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const filterSelect = document.getElementById('filterSelect');
+  const cards = document.querySelectorAll('.card');
+
+  function filterProducts() {
+    const searchValue = searchInput.value.toLowerCase();
+    const filterValue = filterSelect.value;
+
+    cards.forEach(card => {
+      const name = card.querySelector('h3').innerText.toLowerCase();
+      const desc = card.querySelector('p:nth-of-type(2)').innerText.toLowerCase();
+      const category = card.getAttribute('data-category');
+
+      // Rule 1: "all" shows everything
+      const matchesCategory = (filterValue === "all" || category === filterValue);
+
+      // Rule 2: Search applies only inside the selected category
+      const matchesSearch = name.includes(searchValue) || desc.includes(searchValue);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Events
+  searchInput.addEventListener('keyup', filterProducts);
+  filterSelect.addEventListener('change', filterProducts);
+
+  // Run once on load (default: show all)
+  filterProducts();
+</script>
+

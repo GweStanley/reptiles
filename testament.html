@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 1rem;
+    }
+
+    .stars {
+      display: flex;
+      gap: 5px;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      cursor: pointer;
+    }
+
+    .stars span {
+      color: #ccc;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .stars span.active {
+      color: gold;
+      transform: scale(1.1);
+    }
+
+    .rate-btn {
+      display: block;
+      margin: 2rem auto;
+      padding: 12px 25px;
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .rate-btn:hover {
+      background: #1b5e20;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .modal h2 {
+      margin-bottom: 1rem;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .modal input, .modal textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .submit-btn {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #2c3e50;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>What Our Customers Say</h1>
+    <p>Real stories from reptile lovers around the world</p>
+  </header>
+
+  <div class="container">
+    <!-- 20 Testimonials -->
+    <div class="card"><p>“My ball python arrived in perfect health.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Sarah M.</div></div>
+    <div class="card"><p>“The African house snake is thriving.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">James K.</div></div>
+    <div class="card"><p>“Amazing service, with all certifications.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Aisha T.</div></div>
+    <div class="card"><p>“Quick delivery and healthy corn snake.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Daniel R.</div></div>
+    <div class="card"><p>“Best reptile shop experience ever.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Maria P.</div></div>
+    <div class="card"><p>“Knowledgeable staff and great advice.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Leo G.</div></div>
+    <div class="card"><p>“My boa is stunning and super healthy.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Chloe W.</div></div>
+    <div class="card"><p>“Affordable prices, will shop again.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">David S.</div></div>
+    <div class="card"><p>“Excellent packaging for my lizard.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Emma L.</div></div>
+    <div class="card"><p>“Trustworthy and very professional.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Omar F.</div></div>
+    <div class="card"><p>“The frogs I ordered were active.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Sophie C.</div></div>
+    <div class="card"><p>“Clear care guide for my python.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">John B.</div></div>
+    <div class="card"><p>“Super friendly customer support.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Olivia D.</div></div>
+    <div class="card"><p>“Good delivery updates and tracking.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Liam V.</div></div>
+    <div class="card"><p>“Snake was even prettier than pics.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Hannah E.</div></div>
+    <div class="card"><p>“Helpful staff answered all my Qs.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Noah J.</div></div>
+    <div class="card"><p>“Fair pricing and ethical sourcing.”</p><div class="stars" data-rating="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Mia K.</div></div>
+    <div class="card"><p>“Plants for terrarium were perfect.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Ethan R.</div></div>
+    <div class="card"><p>“Safe shipping, great condition.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Grace Y.</div></div>
+    <div class="card"><p>“I recommend them to all reptile fans.”</p><div class="stars" data-rating="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div><div class="author">Alex Z.</div></div>
+  </div>
+
+  <!-- Rate Us Now Button -->
+  <button class="rate-btn" id="openModal">⭐ Rate Us Now</button>
+
+  <!-- Modal -->
+  <div class="modal" id="ratingModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Leave Your Rating</h2>
+      <div class="stars" id="newRating">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
+      <input type="text" id="userName" placeholder="Your Name" required>
+      <textarea id="userFeedback" placeholder="Your Feedback..." rows="4" required></textarea>
+      <button class="submit-btn" id="submitFeedback">Submit</button>
+      <p id="ratingText"></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Exotic Reptiles Shop. All rights reserved.
+  </footer>
+
+  <script>
+    // Highlight stars for each testimonial
+    document.querySelectorAll('.stars').forEach(starBox => {
+      let rating = parseInt(starBox.getAttribute('data-rating'));
+      if (rating) {
+        let stars = starBox.querySelectorAll('span');
+        stars.forEach((star, index) => {
+          if (index < rating) star.classList.add('active');
+        });
+      }
+    });
+
+    // Modal controls
+    const modal = document.getElementById('ratingModal');
+    const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+    openModal.onclick = () => { modal.style.display = 'flex'; }
+    closeModal.onclick = () => { modal.style.display = 'none'; }
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; }
+
+    // New rating stars
+    let selectedRating = 0;
+    const newStars = document.querySelectorAll('#newRating span');
+    const ratingText = document.getElementById('ratingText');
+
+    newStars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        newStars.forEach(s => s.classList.remove('active'));
+        for (let i = 0; i <= index; i++) {
+          newStars[i].classList.add('active');
+        }
+        selectedRating = index + 1;
+        ratingText.textContent = `You selected ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+      });
+    });
+
+    // Submit feedback
+    document.getElementById('submitFeedback').addEventListener('click', () => {
+      const name = document.getElementById('userName').value.trim();
+      const feedback = document.getElementById('userFeedback').value.trim();
+
+      if (!name || !feedback || selectedRating === 0) {
+        alert("Please fill out all fields and select a rating.");
+        return;
+      }
+
+      alert(`Thank you ${name}! Your ${selectedRating}-star review has been submitted.`);
+      modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

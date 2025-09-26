@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Care Guides | Exotic Reptiles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1b4332;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .category {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .category-header {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      background: #2d6a4f;
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .category-header:hover {
+      background: #1b4332;
+    }
+    .category-content {
+      display: none;
+      padding: 1rem 1.5rem;
+      background: #f0fdf4;
+    }
+    .category-content p {
+      margin-bottom: 1rem;
+    }
+    .toggle-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+    .category-header.active .toggle-icon {
+      transform: rotate(45deg);
+    }
+    footer {
+      background: #1b4332;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .category-header { font-size: 0.95rem; }
+      .category-content { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Reptile Care Guides</h1>
+  <p>Learn how to care for your reptiles the right way</p>
+</header>
+
+<div class="container">
+
+  <!-- Snakes -->
+  <div class="category">
+    <div class="category-header">Snakes <span class="toggle-icon">+</span></div>
+    <div class="category-content">
+      <p><strong>Housing:</strong> Provide an appropriately sized enclosure with secure lid and proper ventilation.</p>
+      <p><strong>Temperature & Humidity:</strong> Maintain a thermal gradient and monitor humidity according to species needs.</p>
+      <p><strong>Feeding:</strong> Feed pre-killed or frozen-thawed prey. Avoid handling snakes for 24-48 hours after feeding.</p>
+      <p><strong>Handling:</strong> Be gentle, support the snake’s body, and avoid sudden movements.</p>
+      <p><strong>Health:</strong> Regularly check for shedding issues, mites, and signs of illness.</p>
+    </div>
+  </div>
+
+  <!-- Lizards -->
+  <div class="category">
+    <div class="category-header">Lizards <span class="toggle-icon">+</span></div>
+    <div class="category-content">
+      <p><strong>Housing:</strong> Provide climbing branches, hiding spots, and a substrate suitable for the species.</p>
+      <p><strong>Temperature & Lighting:</strong> UVB lighting is essential for vitamin D3 synthesis. Maintain a basking spot.</p>
+      <p><strong>Feeding:</strong> Offer a balanced diet of insects, greens, and supplements where necessary.</p>
+      <p><strong>Handling:</strong> Lizards can be stressed easily. Handle calmly and minimally at first.</p>
+      <p><strong>Health:</strong> Watch for shedding problems, respiratory issues, and lethargy.</p>
+    </div>
+  </div>
+
+  <!-- Turtles -->
+  <div class="category">
+    <div class="category-header">Turtles <span class="toggle-icon">+</span></div>
+    <div class="category-content">
+      <p><strong>Housing:</strong> Provide an aquatic or semi-aquatic enclosure with clean water and basking area.</p>
+      <p><strong>Temperature & Lighting:</strong> UVB lighting is necessary for shell health. Maintain water and basking temperatures.</p>
+      <p><strong>Feeding:</strong> Offer a mix of commercial turtle food, leafy greens, and occasional protein.</p>
+      <p><strong>Handling:</strong> Limit handling; always support their body and shell.</p>
+      <p><strong>Health:</strong> Keep water clean, watch for shell rot and signs of infection.</p>
+    </div>
+  </div>
+
+  <!-- Amphibians -->
+  <div class="category">
+    <div class="category-header">Amphibians <span class="toggle-icon">+</span></div>
+    <div class="category-content">
+      <p><strong>Housing:</strong> Provide a terrarium with humidity control, hiding spots, and a shallow water area.</p>
+      <p><strong>Temperature & Humidity:</strong> Keep ambient temperatures stable and maintain high humidity as required.</p>
+      <p><strong>Feeding:</strong> Feed live insects or small invertebrates appropriate for size.</p>
+      <p><strong>Handling:</strong> Avoid handling when possible; amphibians absorb chemicals through skin.</p>
+      <p><strong>Health:</strong> Watch for skin lesions, lethargy, or abnormal behavior.</p>
+    </div>
+  </div>
+  <!-- Frogs -->
+<div class="category">
+  <div class="category-header">Frogs <span class="toggle-icon">+</span></div>
+  <div class="category-content">
+    <p><strong>Housing:</strong> Provide a secure terrarium with a shallow water area and plenty of hiding spots.</p>
+    <p><strong>Temperature & Humidity:</strong> Maintain moderate to high humidity depending on species, and keep ambient temperature stable.</p>
+    <p><strong>Feeding:</strong> Offer small live insects like crickets or fruit flies, dusted with calcium supplements.</p>
+    <p><strong>Handling:</strong> Minimize handling; frogs have sensitive skin and can absorb harmful chemicals.</p>
+    <p><strong>Health:</strong> Monitor for skin discoloration, lethargy, and abnormal swimming behavior.</p>
+  </div>
+</div>
+
+<!-- Habitat Plants & Flowers -->
+<div class="category">
+  <div class="category-header">Habitat Plants & Flowers <span class="toggle-icon">+</span></div>
+  <div class="category-content">
+    <p><strong>Selection:</strong> Use non-toxic, terrarium-safe plants. Live plants improve humidity, oxygen levels, and aesthetics.</p>
+    <p><strong>Placement:</strong> Arrange plants to provide hiding spots, climbing opportunities, and shelter for reptiles and amphibians.</p>
+    <p><strong>Care:</strong> Water regularly, trim dead leaves, and avoid fertilizers that could harm your animals.</p>
+    <p><strong>Flowers:</strong> Choose small, non-toxic flowering plants that are safe for enclosure inhabitants.</p>
+    <p><strong>Enrichment:</strong> Plants and flowers enrich the habitat, reduce stress, and encourage natural behaviors.</p>
+  </div>
+</div>
+<h2>More help needed?</h2>
+<a href="contact.html" 
+   style="display:inline-block; 
+          background-color:rgb(75, 15, 216); 
+          color:#fff; 
+          padding:10px 20px; 
+          text-align:center; 
+          text-decoration:none; 
+          border-radius:6px; 
+          font-weight:bold; 
+          margin:20px auto; 
+          display:block; 
+          width:fit-content;">
+   Talk to Our expert...
+</a>
+
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Exotic Reptiles. All rights reserved.</p>
+</footer>
+
+<script>
+  // Collapsible functionality
+  const headers = document.querySelectorAll('.category-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+      // Close all
+      headers.forEach(h => h.classList.remove('active'));
+      document.querySelectorAll('.category-content').forEach(c => c.style.display = 'none');
+      // Toggle current
+      if (!isActive) {
+        content.style.display = 'block';
+        header.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

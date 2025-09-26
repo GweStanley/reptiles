@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Exotic Reptiles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1b4332;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 0.7rem 1.5rem;
+      background: #1b4332;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #2d6a4f;
+    }
+
+    .info, .socials {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .info p, .info a {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin-right: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .socials a svg {
+      width: 32px;
+      height: 32px;
+      fill: #1b4332;
+      transition: 0.3s;
+    }
+
+    .socials a:hover svg {
+      fill: #2d6a4f;
+    }
+
+    footer {
+      background: #1b4332;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you!</p>
+</header>
+
+<div class="container">
+
+  <!-- Contact Form -->
+  <form id="contactForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Contact Info -->
+  <div class="info">
+    <p>📞 <a href="tel:+237123456789">+237 123 456 789</a></p>
+    <p>💬 <a href="https://wa.me/237123456789" target="_blank">WhatsApp Chat</a></p>
+    <p>📧 <a href="mailto:info@exoticreptiles.com">info@exoticreptiles.com</a></p>
+    <p>🏠 12 Reptile Lane, </p>
+  </div>
+
+  <!-- Social Media -->
+  <div class="socials">
+    <a href="https://facebook.com" target="_blank" title="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24H12.82V14.708h-3.4v-3.625h3.4V8.413c0-3.37 2.055-5.197 5.064-5.197 1.44 0 2.676.106 3.035.154v3.52l-2.08.001c-1.63 0-1.947.776-1.947 1.913v2.509h3.892l-.507 3.625h-3.385V24h6.632c.728 0 1.325-.597 1.325-1.334V1.333C24 .597 23.403 0 22.675 0z"/></svg>
+    </a>
+    <a href="https://t.me" target="_blank" title="Telegram">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.533 8.677l-1.991 9.39c-.15.667-.54.833-1.091.517l-3.017-2.225-1.455 1.401c-.16.16-.293.293-.598.293l.213-3.036 5.525-4.992c.24-.213-.053-.333-.372-.12l-6.82 4.29-2.932-.917c-.637-.199-.649-.637.133-.944l11.466-4.418c.533-.198.997.12.825.944z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M12 0v8.17c-1.43 0-2.783-.435-3.88-1.178v4.158c.756.575 1.688.915 2.68.915 3.022 0 5.48-2.458 5.48-5.48V0h-4.28z"/></svg>
+    </a>
+    <a href="https://twitter.com" target="_blank" title="Twitter">
+      <svg viewBox="0 0 24 24"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.38 4.482A13.946 13.946 0 0 1 1.671 3.149 4.917 4.917 0 0 0 3.195 9.722a4.902 4.902 0 0 1-2.229-.616v.06a4.918 4.918 0 0 0 3.946 4.827 4.935 4.935 0 0 1-2.224.084 4.923 4.923 0 0 0 4.593 3.417A9.867 9.867 0 0 1 0 19.54a13.918 13.918 0 0 0 7.548 2.212c9.056 0 14.01-7.504 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/></svg>
+    </a>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name === '' || email === '' || message === ''){
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Simple email regex validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!email.match(emailPattern)){
+      alert('Please enter a valid email.');
+      return;
+    }
+
+    alert('Thank you! Your message has been sent.');
+    form.reset();
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 Exotic Reptiles. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
